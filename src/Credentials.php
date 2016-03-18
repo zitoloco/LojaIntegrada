@@ -104,6 +104,5 @@ class Credentials
         }
 
         return $this->environment->getWsUrl($resource);
-
     }
 }

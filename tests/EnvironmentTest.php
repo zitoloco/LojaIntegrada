@@ -46,5 +46,4 @@ class EnvironmentTest extends \PHPUnit_Framework_TestCase
     {
         $this->assertEquals('https://test.com/test', $this->environment->getUrl('/test'));
     }
-
 }

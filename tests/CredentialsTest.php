@@ -103,5 +103,4 @@ class CredentialsTest extends \PHPUnit_Framework_TestCase
             $credentials->getWsUrl('/v1/test', ['id_externo' => 1])
         );
     }
-
 }

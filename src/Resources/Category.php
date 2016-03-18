@@ -19,10 +19,8 @@ class Category extends BaseResource
      */
     protected function __setUp()
     {
-
         $this->validator
             ->requirePresence('nome')
             ->notEmpty('nome', 'Required field');
-
     }
 }

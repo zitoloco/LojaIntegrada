@@ -56,7 +56,6 @@ abstract class BaseResource
         );
 
         $this->__setUp();
-
     }
 
 
@@ -136,12 +135,10 @@ abstract class BaseResource
      */
     protected function __find($endpoint = null)
     {
-
         $url = $this->credentials->getWsUrl($endpoint, $this->getFieldDefault());
         $this->reset();
 
         return $this->client->get($url);
-
     }
 
     /**
@@ -193,7 +190,6 @@ abstract class BaseResource
         }
 
         throw new \InvalidArgumentException($outputErr);
-
     }
 
 

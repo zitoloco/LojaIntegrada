@@ -9,5 +9,4 @@ namespace WSW\LojaIntegrada\Client;
  */
 class LojaIntegradaException extends \RuntimeException
 {
-
 }
