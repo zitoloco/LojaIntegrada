@@ -20,8 +20,6 @@ checks:
 tools:
      php_code_sniffer:
             enabled: true
-            filter:
-                paths: "src"
             config:
                 standard: PSR2
     external_code_coverage:
