@@ -7,7 +7,7 @@
         "cakephp/validation": "^3.2"
     },
     "require-dev": {
-        "phpunit/phpunit": "*"
+        "phpunit/phpunit": "4.*"
     },
     "license": "MIT",
     "authors": [
