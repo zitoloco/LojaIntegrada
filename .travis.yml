@@ -6,8 +6,6 @@ php:
   - 7.0
   - hhvm
 
-install:
-  - composer install
-
-script:
-  - vendor/bin/phpunit -c phpunit.xml --coverage-text
+before_script:
+  - composer selfupdate
+  - composer install --dev --prefer-dist
