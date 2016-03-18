@@ -85,10 +85,10 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 [ico-code-quality]: https://img.shields.io/scrutinizer/g/whera/LojaIntegrada.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/whera/LojaIntegrada.svg?style=flat-square
 
-[link-packagist]: https://packagist.org/packages/wsw/loja-integrada
+[link-packagist]: https://packagist.org/packages/whera/LojaIntegrada
 [link-travis]: https://travis-ci.org/whera/LojaIntegrada
 [link-scrutinizer]: https://scrutinizer-ci.com/g/whera/LojaIntegrada/code-structure
 [link-code-quality]: https://scrutinizer-ci.com/g/whera/LojaIntegrada
-[link-downloads]: https://packagist.org/packages/wsw/loja-integrada
+[link-downloads]: https://packagist.org/packages/whera/LojaIntegrada
 [link-author]: https://github.com/whera
 [link-contributors]: ../../contributors
