@@ -78,12 +78,12 @@ If you discover any security related issues, please email ronaldo@whera.com.br i
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
-[ico-version]: https://img.shields.io/packagist/v/whera/LojaIntegrada.svg?style=flat-square
+[ico-version]: https://img.shields.io/packagist/v/wsw/loja-integrada.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
 [ico-travis]: https://img.shields.io/travis/whera/LojaIntegrada/master.svg?style=flat-square
 [ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/whera/LojaIntegrada.svg?style=flat-square
 [ico-code-quality]: https://img.shields.io/scrutinizer/g/whera/LojaIntegrada.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/whera/LojaIntegrada.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/wsw/loja-integrada.svg?style=flat-square
 
 [link-packagist]: https://packagist.org/packages/wsw/loja-integrada
 [link-travis]: https://travis-ci.org/whera/LojaIntegrada
