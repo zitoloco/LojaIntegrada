@@ -1,3 +1,5 @@
 vendor
 .idea
 index.php
+build
+composer.lock

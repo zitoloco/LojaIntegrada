@@ -1,24 +1,42 @@
 {
     "name": "wsw/loja-integrada",
-    "description": "Cliente para integração com API Loja Integrada",
     "type": "library",
+    "description": "Customer integration with webservice Loja Integrada",
+    "keywords": [
+        "WSW",
+        "LojaIntegrada"
+    ],
+    "homepage": "https://github.com/whera/LojaIntegrada",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ronaldo Matos Rodrigues",
+            "email": "ronaldo@whera.com.br",
+            "homepage": "https://twitter.com/Wheraa",
+            "role": "Developer"
+        }
+    ],
     "require": {
+        "php" : "~5.5|~7.0",
         "guzzlehttp/guzzle": "^6.0",
         "cakephp/validation": "^3.2"
     },
     "require-dev": {
-        "phpunit/phpunit": "^4.5"
+        "phpunit/phpunit" : "4.*",
+        "scrutinizer/ocular": "~1.1",
+        "squizlabs/php_codesniffer": "~2.3"
     },
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Ronaldo M. Rodrigues",
-            "email": "ronaldo@whera.com.br"
-        }
-    ],
     "autoload": {
         "psr-4": {
-            "WSW\\LojaIntegrada\\": ["src/LojaIntegrada", "tests/LojaIntegrada"]
+            "WSW\\LojaIntegrada\\": "src"
         }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "WSW\\LojaIntegrada\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
     }
 }
