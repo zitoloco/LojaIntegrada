@@ -103,4 +103,18 @@ class CredentialsTest extends \PHPUnit_Framework_TestCase
             $credentials->getWsUrl('/v1/test', ['id_externo' => 1])
         );
     }
+
+    public function testGetUrlShouldGetTheUrlFromTheEnvironment()
+    {
+        $credentials = new Credentials(
+            str_repeat('a', 36),
+            str_repeat('b', 36),
+            $this->environment
+        );
+
+        $this->assertEquals(
+            'https://test.com/v1/test',
+            $credentials->getUrl('/v1/test')
+        );
+    }
 }
