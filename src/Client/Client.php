@@ -96,7 +96,7 @@ class Client
      * @exception LojaIntegradaException
      * @return object
      */
-    private function __request($method = 'get', $url, array $fields = [])
+    private function __request($method = 'get', $url = false, array $fields = [])
     {
         $params = [];
         $method = mb_strtolower($method);
