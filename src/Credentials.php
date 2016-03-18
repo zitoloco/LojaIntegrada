@@ -91,18 +91,19 @@ class Credentials
      * @param array|false $params
      * @return string
      */
-    public function getWsUrl($resource, $params = [])
+    public function getWsUrl($resource, $params = false)
     {
         $resource = '/' . ltrim($resource, '/');
 
-        if (empty($params) || !$params) {
-            return $this->environment->getWsUrl($resource);
+        if ($params && !empty($params)) {
+            return sprintf(
+                '%s?%s',
+                $this->environment->getWsUrl($resource),
+                http_build_query($params)
+            );
         }
 
-        return sprintf(
-            '%s?%s',
-            $this->environment->getWsUrl($resource),
-            http_build_query($params)
-        );
+        return $this->environment->getWsUrl($resource);
+
     }
 }
