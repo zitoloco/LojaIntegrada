@@ -22,6 +22,5 @@ class Brand extends BaseResource
         $this->validator
             ->requirePresence('nome')
             ->notEmpty('nome', 'Required field');
-
     }
 }

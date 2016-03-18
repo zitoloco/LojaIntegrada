@@ -2,7 +2,6 @@
 
 namespace WSW\LojaIntegrada\Environments;
 
-
 class SandboxTest extends \PHPUnit_Framework_TestCase
 {
     /**

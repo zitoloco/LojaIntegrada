@@ -114,13 +114,10 @@ class Client
             $response = $this->client->{$method}($url, $params);
 
             return json_decode($response->getBody()->getContents());
-
         } catch (ClientException $e) {
             throw new LojaIntegradaException($e->getMessage(), $e->getCode(), $e->getPrevious());
-
         } catch (ServerException $e) {
             throw new LojaIntegradaException($e->getMessage(), $e->getCode(), $e->getPrevious());
-
         }
     }
 }
