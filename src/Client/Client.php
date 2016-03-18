@@ -24,6 +24,11 @@ class Client
     private $headers = [];
 
     /**
+     * @var array
+     */
+    public static $allowedMethods = ['get', 'post', 'put'];
+
+    /**
      * @param HttpClient|null $client
      */
     public function __construct(HttpClient $client = null)
@@ -54,69 +59,68 @@ class Client
 
     /**
      * @param $url
-     * @return \Psr\Http\Message\StreamInterface
+     * @return object
      */
     public function get($url)
     {
-        try {
-            $response = $this->client->get($url, [
-                'headers' => $this->getHeader()
-            ]);
-
-            return $response->getBody();
-
-        } catch (ClientException $e) {
-            throw new LojaIntegradaException($e->getMessage(), $e->getCode(), $e->getPrevious());
-        } catch (ServerException $e) {
-            throw new LojaIntegradaException($e->getMessage(), $e->getCode(), $e->getPrevious());
-        }
+        return $this->__request('get', $url);
     }
 
 
     /**
      * @param $url
      * @param array $fields
-     * @exception LojaIntegradaException
      * @return object
      */
     public function post($url, array $fields)
     {
-        try {
-            $response = $this->client->post($url, [
-                'headers' => $this->getHeader(),
-                'body' => json_encode($fields)
-            ]);
-
-            return json_decode($response->getBody()->getContents());
-
-        } catch (ClientException $e) {
-            throw new LojaIntegradaException($e->getMessage(), $e->getCode(), $e->getPrevious());
-        } catch (ServerException $e) {
-            throw new LojaIntegradaException($e->getMessage(), $e->getCode(), $e->getPrevious());
-        }
+        return $this->__request('post', $url, $fields);
     }
 
 
     /**
      * @param $url
      * @param array $fields
-     * @exception LojaIntegradaException
      * @return object
      */
     public function put($url, array $fields)
     {
+        return $this->__request('put', $url, $fields);
+    }
+
+
+    /**
+     * @param string $method
+     * @param $url
+     * @param array $fields
+     * @exception LojaIntegradaException
+     * @return object
+     */
+    private function __request($method = 'get', $url, array $fields = [])
+    {
+        $params = [];
+        $method = mb_strtolower($method);
+
+        if (!in_array($method, self::$allowedMethods)) {
+            throw new LojaIntegradaException('Method not allowed by the system', 500);
+        }
+
+        if (!empty($fields)) {
+            $params['body'] = json_encode($fields);
+        }
+        $params['headers'] = $this->getHeader();
+
         try {
-            $response = $this->client->put($url, [
-                'headers' => $this->getHeader(),
-                'body' => json_encode($fields)
-            ]);
+            $response = $this->client->{$method}($url, $params);
 
             return json_decode($response->getBody()->getContents());
 
         } catch (ClientException $e) {
             throw new LojaIntegradaException($e->getMessage(), $e->getCode(), $e->getPrevious());
+
         } catch (ServerException $e) {
             throw new LojaIntegradaException($e->getMessage(), $e->getCode(), $e->getPrevious());
+
         }
     }
 }

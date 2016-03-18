@@ -140,7 +140,7 @@ abstract class BaseResource
         $url = $this->credentials->getWsUrl($endpoint, $this->getFieldDefault());
         $this->reset();
 
-        return json_decode($this->client->get($url));
+        return $this->client->get($url);
 
     }
 
