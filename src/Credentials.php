@@ -88,15 +88,15 @@ class Credentials
 
     /**
      * @param $resource
+     * @param array|false $params
      * @return string
      */
-    public function getWsUrl($resource, array $params = [])
+    public function getWsUrl($resource, $params = [])
     {
         $resource = '/' . ltrim($resource, '/');
 
-        if (empty($params)) {
+        if (empty($params) || !$params) {
             return $this->environment->getWsUrl($resource);
-
         }
 
         return sprintf(
