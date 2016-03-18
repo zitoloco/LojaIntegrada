@@ -1,11 +1,13 @@
 # API Loja Integrada
 
-[![Latest Version on Packagist][ico-version]][link-packagist]
-[![Software License][ico-license]](LICENSE.md)
-[![Build Status][ico-travis]][link-travis]
-[![Coverage Status][ico-scrutinizer]][link-scrutinizer]
-[![Quality Score][ico-code-quality]][link-code-quality]
-[![Total Downloads][ico-downloads]][link-downloads]
+[![Author](http://img.shields.io/badge/author-@wheraa-blue.svg?style=flat-square)](https://twitter.com/Wheraa)
+[![Source Code](https://img.shields.io/badge/source-whera/LojaIntegrada-blue.svg?style=flat-square)](https://github.com/whera/LojaIntegrada/)
+[![Latest Version](https://img.shields.io/github/release/whera/LojaIntegrada.svg?style=flat-square)](https://github.com/whera/LojaIntegrada/releases)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
+[![Build Status](https://img.shields.io/travis/whera/LojaIntegrada/master.svg?style=flat-square)](https://travis-ci.org/whera/LojaIntegrada)
+[![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/whera/LojaIntegrada.svg?style=flat-square)](https://scrutinizer-ci.com/g/whera/LojaIntegrada/code-structure)
+[![Quality Score](https://img.shields.io/scrutinizer/g/whera/LojaIntegrada.svg?style=flat-square)](https://scrutinizer-ci.com/g/whera/LojaIntegrada)
+[![Total Downloads](https://img.shields.io/packagist/dt/wsw/loja-integrada.svg?style=flat-square)](https://packagist.org/packages/wsw/loja-integrada)
 
 API integration with e-commerce system [Loja Integrada](https://lojaintegrada.com.br/)
 
@@ -78,17 +80,5 @@ If you discover any security related issues, please email ronaldo@whera.com.br i
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
-[ico-version]: https://img.shields.io/packagist/v/wsw/loja-integrada.svg?style=flat-square
-[ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/whera/LojaIntegrada/master.svg?style=flat-square
-[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/whera/LojaIntegrada.svg?style=flat-square
-[ico-code-quality]: https://img.shields.io/scrutinizer/g/whera/LojaIntegrada.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/wsw/loja-integrada.svg?style=flat-square
-
-[link-packagist]: https://packagist.org/packages/whera/LojaIntegrada
-[link-travis]: https://travis-ci.org/whera/LojaIntegrada
-[link-scrutinizer]: https://scrutinizer-ci.com/g/whera/LojaIntegrada/code-structure
-[link-code-quality]: https://scrutinizer-ci.com/g/whera/LojaIntegrada
-[link-downloads]: https://packagist.org/packages/whera/LojaIntegrada
-[link-author]: https://github.com/whera
+[link-author]: https://twitter.com/Wheraa
 [link-contributors]: ../../contributors
