@@ -22,27 +22,36 @@ $ composer require wsw/loja-integrada
 ``` php
 use WSW\LojaIntegrada\Credentials;
 use WSW\LojaIntegrada\Resources\Category;
+use WSW\LojaIntegrada\Client\LojaIntegradaException;
 
-$credentials = new Credentials(
-    '0a0000a0-aaa0-0000-a000-aa0a000000aa',
-    '0a0000a0-aaa0-0000-a000-aa0a000000aB'
-);
+try {
+ 
+    $credentials = new Credentials(
+        '0a0000a0-aaa0-0000-a000-aa0a000000aa',
+        '0a0000a0-aaa0-0000-a000-aa0a000000aB'
+    );
 
-$category = new Category($credentials);
+    $category = new Category($credentials);
 
-// returns all records in the category
-$result = $category->getAll();
+    // returns all records in the category
+    $result = $category->getAll();
+    
+    // returns the related category to id
+    $resultID = $category->get(123);
+    
+    // returns the categories related to the ids
+    $resultIDs = $category->get([1, 10, 50, 99]);
+    
+    
+    // returns the related category to the external id
+    $resultIdExternal = $category->idExternal()->find(999);
 
-// returns the related category to id
-$resultID = $category->get(123);
+} catch (LojaIntegradaException $e) {
+    echo $e->getMessage();
 
-// returns the categories related to the ids
-$resultIDs = $category->get([1, 10, 50, 99]);
-
-
-// returns the related category to the external id
-$resultIdExternal = $category->idExternal()->find(999);
-
+} catch (\InvalidArgumentException $e) {
+    echo $e->getMessage();
+}
 
 ```
 
