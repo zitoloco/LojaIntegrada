@@ -19,6 +19,10 @@ checks:
         fix_doc_comments: true
 
 tools:
-    external_code_coverage:
-        timeout: 600
-        runs: 3
+    php_code_sniffer:
+        config:
+            standard: PSR2
+        
+filter:
+    paths:
+        - 'src/*'
