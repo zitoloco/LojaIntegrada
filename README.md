@@ -1,0 +1,1 @@
+[![Build Status](https://travis-ci.org/whera/LojaIntegrada.svg?branch=master)](https://travis-ci.org/whera/LojaIntegrada)
