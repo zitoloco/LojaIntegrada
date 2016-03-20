@@ -36,5 +36,5 @@ tools:
         excluded_dirs: [vendor, test]
     php_code_coverage: false
     external_code_coverage:
-    timeout: 300
-    runs: 2
+        timeout: 300
+        runs: 1
