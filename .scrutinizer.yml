@@ -23,10 +23,6 @@ checks:
         fix_identation_4spaces: true
         fix_doc_comments: true
 tools:
-    external_code_coverage:
-        timeout: 600
-        runs: 1
-    php_code_coverage: false
     php_code_sniffer:
         config:
             standard: PSR2
@@ -38,3 +34,7 @@ tools:
     php_cpd:
         enabled: true
         excluded_dirs: [vendor, test]
+    php_code_coverage: false
+    external_code_coverage:
+    timeout: 300
+    runs: 2
