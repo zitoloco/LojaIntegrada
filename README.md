@@ -36,13 +36,13 @@ try {
     $category = new Category($credentials);
 
     // returns all records in the category
-    $result = $category->getAll();
+    $result = $category->findAll();
     
     // returns the related category to id
-    $resultID = $category->get(123);
+    $resultID = $category->find(123);
     
     // returns the categories related to the ids
-    $resultIDs = $category->get([1, 10, 50, 99]);
+    $resultIDs = $category->find([1, 10, 50, 99]);
     
     
     // returns the related category to the external id
