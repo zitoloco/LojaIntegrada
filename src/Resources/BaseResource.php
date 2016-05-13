@@ -129,6 +129,22 @@ abstract class BaseResource
         return $this->__find($endpoint);
     }
 
+
+    /**
+     * @param int $id
+     * @return bool
+     */
+    public function exists($id)
+    {
+        try {
+            $this->find($id);
+            return true;
+        } catch(LojaIntegradaException $e) {
+            return false;
+        }
+    }
+    
+
     /**
      * @param null $endpoint
      * @return object
