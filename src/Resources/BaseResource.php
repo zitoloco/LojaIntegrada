@@ -161,7 +161,7 @@ abstract class BaseResource
         try {
             $this->find($id);
             return true;
-        } catch(LojaIntegradaException $e) {
+        } catch (LojaIntegradaException $e) {
             return false;
         }
     }
