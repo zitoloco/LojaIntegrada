@@ -78,6 +78,28 @@ abstract class BaseResource
 
 
     /**
+     * @param int $limit
+     * @return $this
+     */
+    public function setLimit($limit = 20)
+    {
+        $this->setFieldDefault('limit', (int) $limit);
+        return $this;
+    }
+
+
+    /**
+     * @param int $offset
+     * @return $this
+     */
+    public function setOffset($offset = 20)
+    {
+        $this->setFieldDefault('offset', (int) $offset);
+        return $this;
+    }
+
+
+    /**
      * @param $key
      * @param $value
      */
