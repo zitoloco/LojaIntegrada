@@ -10,6 +10,20 @@ namespace WSW\LojaIntegrada\Resources;
  */
 class Order extends BaseResource
 {
+    const PEDIDO_CANCELADO            = 8;
+    const PEDIDO_EFETUADO             = 9;
+    const PEDIDO_ENTREGUE             = 14;
+    const PEDIDO_ENVIADO              = 11;
+    const PEDIDO_PAGO                 = 4;
+    const PEDIDO_EM_PRODUCAO          = 17;
+    const PEDIDO_EM_SEPARACAO         = 15;
+    const PEDIDO_PRONTO_PARA_RETIRADA = 13;
+    const PEDIDO_AGUARDANDO_PAGAMENTO = 2;
+    const PAGAMENTO_DEVOLVIDO         = 7;
+    const PAGAMENTO_EM_ANALISE        = 3;
+    const PAGAMENTO_EM_CHARGEBACK     = 16;
+    const PAGAMENTO_EM_DISPUTA        = 6;
+
     /**
      * @var string
      */
