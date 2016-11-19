@@ -39,4 +39,19 @@ class Order extends BaseResource
 
         return $this->__find($endpoint);
     }
+
+    /**
+     * @param  $id
+     * @return object
+     */
+    public function updateStatus($id, $status_code)
+    {
+        $this->endPoint = 'v1/situacao/pedido';
+
+        $fields = [
+            'codigo' => $status_code,
+        ];
+
+        return $this->update($id, $fields);
+    }
 }
