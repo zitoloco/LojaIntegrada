@@ -54,4 +54,15 @@ class Order extends BaseResource
 
         return $this->update($id, $fields);
     }
+
+    public function updateTracking($id, $tracking)
+    {
+        $this->endPoint = sprintf('v1/pedido_envio', $id);
+
+        $fields = [
+            'objeto' => $tracking,
+        ];
+
+        return $this->update($id, $fields);
+    }
 }
